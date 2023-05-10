@@ -104,7 +104,7 @@ function speech(new_=true, hylicslb=false, words=global.hylicswords, randfunc=ir
 	sentence = string_replace_all(sentence, "#", hylicslb ? "\n" : " ");
 	sentence = capitalize(sentence);
 	randomspeech = sentence;
-	log(randomspeech);
+	//log(randomspeech);
 	return randomspeech;
 }
 

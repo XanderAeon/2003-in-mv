@@ -2,6 +2,10 @@ function c_null() {
 	//log("C NULLING");
 	return;
 }
+
+global.marineconstellation = font_add_sprite_ext(fts_marineconstellation, "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÁÉÍÓÚÄËÏÖÜáéíóúäüïöëÑñıẞßÆæ¡¿♫♪☯東方青赤紫果世外♥", true, 1);
+#macro ft_marineconstellation global.marineconstellation
+
 #macro yeah true
 #macro nah false
 #macro maybe undefined
