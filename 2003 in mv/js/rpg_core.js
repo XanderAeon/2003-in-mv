@@ -2474,6 +2474,7 @@ Graphics._updateErrorPrinter = function() {
 Graphics._createCanvas = function() {
     this._canvas = document.createElement('canvas');
     this._canvas.id = 'GameCanvas';
+	this._canvas.style["image-rendering"] = "pixelated"
     this._updateCanvas();
     document.body.appendChild(this._canvas);
 };
@@ -2483,6 +2484,7 @@ Graphics._createCanvas = function() {
  * @method _updateCanvas
  * @private
  */
+ 
 Graphics._updateCanvas = function() {
     this._canvas.width = this._width;
     this._canvas.height = this._height;

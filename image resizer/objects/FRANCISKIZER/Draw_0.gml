@@ -12,4 +12,5 @@ draw_set_halign(fa_right);
 iterate thelog to {
 	draw_meaning(room_width-xdraw, ydraw+i*(interval/2), thelog[i]+"<", u, 2, u, u, 1-i/12);
 }
+draw_meaning(room_width-xdraw, room_height-30, "ANTEROGRADE_ARTICULATOR.", u, 2);
 draw_set_halign(fa_left);
