@@ -860,7 +860,7 @@ Bitmap.prototype.initialize = function(width, height) {
      * @property fontSize
      * @type Number
      */
-    this.fontSize = 28;
+    this.fontSize = 10;
 
     /**
      * Whether the font is italic.
@@ -892,7 +892,7 @@ Bitmap.prototype.initialize = function(width, height) {
      * @property outlineWidth
      * @type Number
      */
-    this.outlineWidth = 4;
+    this.outlineWidth = 2;
 };
 
 /**

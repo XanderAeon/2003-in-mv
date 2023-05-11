@@ -29,11 +29,11 @@ Window_Base.prototype.initialize = function(x, y, width, height) {
 
 Window_Base._iconWidth  = 32;
 Window_Base._iconHeight = 32;
-Window_Base._faceWidth  = 144;
-Window_Base._faceHeight = 144;
+Window_Base._faceWidth  = 144/4;
+Window_Base._faceHeight = 144/4;
 
 Window_Base.prototype.lineHeight = function() {
-    return 36;
+    return 16;
 };
 
 Window_Base.prototype.standardFontFace = function() {
@@ -47,11 +47,11 @@ Window_Base.prototype.standardFontFace = function() {
 };
 
 Window_Base.prototype.standardFontSize = function() {
-    return 28;
+    return 16;
 };
 
 Window_Base.prototype.standardPadding = function() {
-    return 18;
+    return 6;
 };
 
 Window_Base.prototype.textPadding = function() {
@@ -763,7 +763,7 @@ Window_Selectable.prototype.maxItems = function() {
 };
 
 Window_Selectable.prototype.spacing = function() {
-    return 12;
+    return 6;
 };
 
 Window_Selectable.prototype.itemWidth = function() {
@@ -1576,7 +1576,7 @@ Window_MenuCommand.initCommandPosition = function() {
 };
 
 Window_MenuCommand.prototype.windowWidth = function() {
-    return 240;
+    return 80;
 };
 
 Window_MenuCommand.prototype.numVisibleRows = function() {
@@ -1709,7 +1709,7 @@ Window_MenuStatus.prototype.initialize = function(x, y) {
 };
 
 Window_MenuStatus.prototype.windowWidth = function() {
-    return Graphics.boxWidth - 240;
+    return Graphics.boxWidth - 80;
 };
 
 Window_MenuStatus.prototype.windowHeight = function() {
@@ -1762,7 +1762,7 @@ Window_MenuStatus.prototype.drawItemImage = function(index) {
 Window_MenuStatus.prototype.drawItemStatus = function(index) {
     var actor = $gameParty.members()[index];
     var rect = this.itemRect(index);
-    var x = rect.x + 162;
+    var x = rect.x + 162/4;
     var y = rect.y + rect.height / 2 - this.lineHeight() * 1.5;
     var width = rect.width - x - this.textPadding();
     this.drawActorSimpleStatus(actor, x, y, width);
@@ -2653,7 +2653,7 @@ Window_Options.prototype.initialize = function() {
 };
 
 Window_Options.prototype.windowWidth = function() {
-    return 400;
+    return 150;
 };
 
 Window_Options.prototype.windowHeight = function() {
@@ -2693,7 +2693,7 @@ Window_Options.prototype.drawItem = function(index) {
 };
 
 Window_Options.prototype.statusWidth = function() {
-    return 120;
+    return 60;
 };
 
 Window_Options.prototype.statusText = function(index) {
@@ -5740,12 +5740,12 @@ Window_TitleCommand.initCommandPosition = function() {
 };
 
 Window_TitleCommand.prototype.windowWidth = function() {
-    return 240;
+    return 80;
 };
 
 Window_TitleCommand.prototype.updatePlacement = function() {
     this.x = (Graphics.boxWidth - this.width) / 2;
-    this.y = Graphics.boxHeight - this.height - 96;
+    this.y = Graphics.boxHeight - this.height - 48;
 };
 
 Window_TitleCommand.prototype.makeCommandList = function() {
